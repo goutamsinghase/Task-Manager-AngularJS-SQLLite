@@ -1,0 +1,29 @@
+{
+  "name": "angular-file-structure",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+  	 "start": "gulp serve",
+     "production": "NODE_ENV=production gulp build",
+     "clean": "gulp clean",
+     "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Goutam Singha",
+  "license": "ISC",
+  "dependencies": {
+    "browser-sync": "^2.18.12",
+    "del": "^2.2.2",
+    "gulp": "^3.9.1",
+    "gulp-browserify": "^0.5.1",
+    "gulp-clean-css": "^3.4.0",
+    "gulp-concat": "^2.6.1",
+    "gulp-if": "^2.0.2",
+    "gulp-ng-annotate": "^2.0.0",
+    "gulp-notify": "^3.0.0",
+    "gulp-rename": "^1.2.2",
+    "gulp-sass": "^3.1.0",
+    "gulp-uglify": "^3.0.0",
+    "stringify": "^5.1.0"
+  }
+}
