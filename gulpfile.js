@@ -18,7 +18,8 @@ var gulp = require('gulp'),
         libjs: [
             'bower_components/angular/angular.min.js',
             'bower_components/angular-ui-router/release/angular-ui-router.min.js',
-            'bower_components/angular-bootstrap/ui-bootstrap-tpls.min.js'
+            'bower_components/angular-bootstrap/ui-bootstrap-tpls.min.js',
+            'bower_components/angular-sqlite/angular-sqlite.js'
         ],
         libCss: [
             'bower_components/bootstrap/dist/css/bootstrap.min.css',

@@ -19,6 +19,7 @@
     "angular-ui-router": "^1.0.3",
     "angular-bootstrap": "^2.5.0",
     "bootstrap": "^3.3.7",
-    "components-font-awesome": "^4.7.0"
+    "components-font-awesome": "^4.7.0",
+    "angular-sqlite": "^0.1.2"
   }
 }

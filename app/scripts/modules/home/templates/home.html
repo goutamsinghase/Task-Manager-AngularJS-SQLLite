@@ -1,11 +1,45 @@
-<div class="container">
-  <h1>Home Page</h1>
-  <p>Coming Soon</p>
-  <div class="row">
-    <div class="col">
-      <pre>You are currently on page {{currentPage}}</pre>
-      <ul uib-pager total-items="totalItems" ng-model="currentPage"></ul>
+<style type="text/css">
+.custom-row {
+  margin: 16px 0;
+  padding-bottom: 12px;
+  border-bottom: 1px solid #eee;
+}
+
+.col-sm-8, .col-sm-2 {
+  padding: 0;
+}
+</style>
+<div class="container" ng-init="getAllTask()">
+  <!-- HEADER AND Task COUNT -->
+  <div class="jumbotron text-center">
+    <h1>I'm a Task Manager <span class="label label-info">{{ Tasks.length }}</span></h1>
+  </div>
+  <!-- Task LIST -->
+  <div id="Task-list" class="row">
+    <div class="col-sm-4 col-sm-offset-4">
+      <!-- LOOP OVER THE TaskS IN $scope.Tasks -->
+      <div class="row custom-row" ng-repeat="Task in Tasks track by $index">
+        <div class="col-sm-8"><input type="text" name="nameval" value="{{Task.name}}" ng-model="Task.name"></div>
+        <div class="col-sm-2">
+          <input type="button" name="Edit" ng-click="updateTask($index)" value="Edit">
+        </div>
+        <div class="col-sm-2">
+          <input type="button" name="Delete" ng-click="deleteTask($index)" value="Delete">
+        </div>
+      </div>
     </div>
-    <div class="col"></div>
+  </div>
+  <!-- FORM TO CREATE TaskS -->
+  <div id="Task-form" class="row">
+    <div class="col-sm-8 col-sm-offset-2 text-center">
+      <form>
+        <div class="form-group">
+          <!-- BIND THIS VALUE TO formData.text IN ANGULAR -->
+          <input type="text" class="form-control input-lg text-center" placeholder="Insert the Task Name" ng-model="formData.text">
+        </div>
+        <!-- createTask() WILL CREATE NEW TaskS -->
+        <button type="submit" class="btn btn-primary btn-lg" ng-click="createTask()">Add</button>
+      </form>
+    </div>
   </div>
 </div>
