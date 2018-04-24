@@ -1,4 +1,4 @@
-# Task-Manager
+# Task Manager
 
 Simple Task Manager using Angular JS 1.6.4 and SQLLite Database
 
