@@ -1,4 +1,4 @@
-# soding-individual-assignment-2
+# Task-Manager-AngularJS-SQLite
 
 # Step 1: Go to the project directory in terminal and run the following command
 
